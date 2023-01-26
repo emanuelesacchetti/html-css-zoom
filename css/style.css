@@ -13,6 +13,8 @@
 
 /*css*/
 
+
+/*header*/
 header{
     display: flex;
     justify-content: flex-end;
@@ -27,4 +29,44 @@ header{
     color: white;
     border-radius: 10px;
     margin: 5px;
+}
+
+
+
+
+/*footer*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: darkslategrey;
+}
+
+.item {
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.item ul {
+    display: inline-block;
+    list-style: none;
+
+}
+
+.white {
+    color: white;
+}
+
+#ft_item_dx {
+    color: red;
+    background-color: grey;
+    padding: 0 10px;
+}
+
+.item li {
+    padding: 10px;
 }
