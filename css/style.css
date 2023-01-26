@@ -8,11 +8,7 @@ body {
     font-family: sans-serif;
 }
 
-/*debug*/
 
-.debug .border{
-    border: 1px solid red;
-}
 
 
 /*css*/
@@ -24,7 +20,7 @@ header{
     justify-content: flex-end;
     align-items: center;
     background-color: black;
-    
+    height: 35px;
 }
 
 .element {
@@ -41,14 +37,15 @@ header{
 
 .wrapper {
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - (90px + 35px)); /*viewport - (altezza dell'header + altezza del footer)*/
     background-color: black;
+    
 }
 
 .container {
     width: 80%;
-    height: 90%;
-    margin:  auto;
+    height: 100%;
+    margin: auto;
     background-color: black;
     display: flex;
     flex-wrap: wrap;
@@ -58,10 +55,19 @@ header{
     padding-top: 50px;
 }
 
+/*non riuscivo a togliere la scrollbar 
+e ho trovato questa soluzione 
+ma so che non è compatibile 
+con tutti i browser*/
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
 .main_item {
-    width: 170px;
-    height: 130px;
-    margin: 6px 3px;
+    width: 250px;
+    height: 200px;
+    margin: 10px 5px;
     position: relative;
     font-size: 13px;
 }
@@ -76,8 +82,8 @@ header{
 }
 
 .main_item img {
-    width: 170px;
-    height: 130px;
+    width: 250px;
+    height: 200px;
     object-position: center;
     object-fit: cover;
 }
@@ -90,7 +96,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 90px;
     background-color: darkslategrey;
 }
 
@@ -100,12 +106,6 @@ footer {
     display: flex;
     align-items: center;
     text-align: center;
-    
-}
-
-.item ul {
-    display: inline-block;
-    list-style: none;
     
 }
 
@@ -130,10 +130,34 @@ footer {
     padding: 0 10px;
 }
 
-.item li {
-    padding: 10px;
-}
+
 
 #green{
     color: green;
+}
+
+.flex_cont_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    text-decoration: none;
+}
+
+.flex_item_box_big {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.flex_item_box_small{
+    width: 20px;
+    text-align: center;
+    color: white;
+}
+
+.ft_item_ctr .flex_item_box_big {
+    width: 120px;
+}
+.ft_item_sx .flex_item_box_big {
+    width: 70px;
 }
